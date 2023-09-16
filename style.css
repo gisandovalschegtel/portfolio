@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  text-align: center;
+ list-style-type: none;
+
+}
+body {
+  background-color: #cfbadc;
+background-image: linear-gradient(0deg, #cfbadc 0%, #b097e1 27%, #5d5373 81%);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Gloria Hallelujah', cursive;
+  justify-content: center;
+  align-content: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(41, 31, 48);
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.menu > li {
+  display: inline-block;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  color: rgb(36, 63, 87);
+  font-size: 20px;
+  text-decoration: none;
+}
+.submenu {
+  display: none;
+  position: absolute; /*estatico*/
+}
+
+.submenu li {
+  display: block;
+}
+
+.menu > li:hover .submenu {
+  display: block;
+  background-color: #cfbadc;
+}
+
+.navbar-mobile {
+  display: none;
+  padding: 5px;
+ height: 60px;
+  width: 100%;
+}
+
+
+.contenedor-presentacion {
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  align-items: stretch;
+  justify-content: center;
+  height: 200px;
+
+}
+
+.contenedor-presentacion .informacion {
+  padding: 10px;
+  width: 50%;
+  
+}
+
+.contenedor-conocimientos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 1em;
+  height: 250px;
+}
+
+.l-conocimiento {
+  display: flex;
+  gap: 20px;
+}
+
+.l-conocimiento li {
+  padding: 5px 15px;
+  
+}
+
+h3,
+p {
+  color: rgb(40, 5, 72);
+}
+
+img {
+
+  width: 150px;
+  height: 100%;
+  ;
+}
+.img-conocimiento{
+  
+  transition: transform .2s; 
+}
+.img-conocimiento:hover{
+  margin-top:10px;
+    transform: scale(1.2); 
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-footer {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-footer li a {
+  color: rgb(215, 225, 234);
+  font-size: 10px;
+  padding: 5px 15px;
+}
+
+.footer .hecho,
+.footer i {
+  display: flex;
+  padding: 2px;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.footer i {
+  padding: 5px;
+}
+
+.footer .menu-footer li a:hover,
+.footer i:hover,
+.navbar .menu li a:hover {
+  background-color: #988fa8;
+  color: rgb(12, 51, 114);
+ 
+  padding: 15px 25px; /* Efecto de expansión al pasar el cursor */
+}
+
+/*Css para proyectos.html*/
+.contenedor-proyectos {
+  border: 1px solid black;
+  background-color: rgb(158, 207, 207);
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.proyect {
+  border: 2px solid black;
+  padding: 5%;
+  align-items: center;
+  background-color: #9f9aa6;
+  margin: 10px;
+  width: 20%;
+  height: 250px;
+
+}
+
+.proyect img {
+  height: 100px;
+}
+
+/*Css para contacto.html*/
+.contenedor-contacto {
+  
+   padding: 2em;
+  display: flex;
+
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.texto {
+  border: 2px solid black;
+  padding: 5%;
+  background-color: #ccc8d3;
+  line-height: 50px;
+  width: 100%;
+}
+
+.contenedor-contacto .cont-redes {
+  border: 2px solid black;
+  align-items: stretch;
+  background-color: rgb(234, 232, 228);
+  justify-content: space-around;
+  align-content: space-around;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  line-height: 40px;
+  width: 80%;
+}
+
+.contenedor-contacto .redes a {
+  font-size: 30px;
+}
+
+.lista-redes {
+  border: 2px solid black;
+  box-shadow: 1px 2px 2px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgb(184, 187, 231);
+}
+/* Media Queries para Mobile */
+@media (max-width: 480px) {
+  .navbar-mobile {
+    display: flex;
+  }
+  .navbar {
+    display: none;
+  }
+ /* .menu {
+
+    display: none;
+  }*/
+  .contenedor-presentacion,
+   .contenedor-conocimientos,
+    .contenedor-proyectos {
+    flex-direction: column;
+    padding: 1em;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: max-content;
+
+  }
+  .contenedor-contacto .cont-redes{
+    width: max-content;
+    padding: 5px;
+  }
+  .contenedor-contacto .texto{
+    width: 90%;
+    padding: 10px 10px;
+  }
+  .contenedor-presentacion .informacion,
+  .contenedor-contacto .texto,
+  .contenedor-proyectos .proyect {
+    width: 100%;
+    padding: 10px 10px;
+  }
+
+  .l-conocimiento {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .menu-footer {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
+  img {
+    width: 110px;
+    height: 115px;
+  }
+
+  .footer {
+    padding: 20px 0;
+  
+  }
+
+  .redes {
+    padding: 0 10px;
+  }
+
+}/*fin de media para mobile*/
+
+/* Media Queries para Tablet */
+@media only screen and (max-width: 768px) and (min-width:481px) {
+  .navbar {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+  }
+
+  .menu {
+    margin-left: 0;
+    flex-direction: column;
+    gap: 1px;
+    background-color: rgb(41, 31, 48);
+
+
+  }
+  .menu li {
+    border-bottom: 1px solid rgb(75, 93, 122);
+  }
+
+  .contenedor-presentacion,
+  .contenedor-conocimientos,
+
+  .contenedor-proyectos {
+    flex-direction: column;
+    padding: 1em;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: max-content;
+
+  }
+  .contenedor-contacto .cont-redes{
+    width: 50px;
+  }
+  .contenedor.presentacion .informacion,
+  .contenedor-proyectos .proyect {
+    width: 100%;
+    padding: 10px 10px;
+    
+  }
+  .contenedor-contacto .texto{
+    width: 70%;
+    font-size: 15px;
+    padding: 10px 10px;
+  }
+  .l-conocimiento {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .menu-footer {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
+  img {
+    width: 100px;
+    height: 110px;
+  }
+
+  .footer {
+    padding: 20px 0;
+  }
+
+  .redes {
+    padding: 0 10px;
+  }
+}
+
+/*fin de media para tablet*/
